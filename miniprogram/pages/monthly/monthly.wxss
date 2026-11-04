@@ -6,7 +6,7 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 20rpx;
   letter-spacing: 4rpx;
-  color: #8A9A9B;
+  color: #9C8A76;
 }
 
 .head-title {
@@ -21,16 +21,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 20rpx 0;
-  border-top: 1rpx solid #C9D3D0;
-  border-bottom: 1rpx solid #C9D3D0;
+  border-top: 1rpx solid #E3D2BA;
+  border-bottom: 1rpx solid #E3D2BA;
 }
 
 .nav-btn {
   padding: 8rpx 18rpx;
   font-size: 24rpx;
   letter-spacing: 2rpx;
-  color: #4A5B60;
-  border: 1rpx solid #C9D3D0;
+  color: #7A624C;
+  border: 1rpx solid #E3D2BA;
 }
 
 .nav-current {
@@ -41,14 +41,14 @@
 .total-card {
   margin-top: 36rpx;
   padding: 40rpx 34rpx;
-  background: #22323B;
-  color: #F4F6F5;
+  background: #4A2E1C;
+  color: #FBF5EB;
 }
 
 .total-caption {
   font-size: 24rpx;
   letter-spacing: 4rpx;
-  color: #A9BDB9;
+  color: #E4CDB0;
 }
 
 .total-big {
@@ -62,9 +62,9 @@
   justify-content: space-between;
   margin-top: 28rpx;
   padding-top: 22rpx;
-  border-top: 1rpx solid #40565E;
+  border-top: 1rpx solid #6B4A2E;
   font-size: 24rpx;
-  color: #A9BDB9;
+  color: #E4CDB0;
 }
 
 .bar-item {
@@ -80,16 +80,16 @@
 .bar-track {
   margin-top: 12rpx;
   height: 14rpx;
-  background: #E3E9E6;
+  background: #F0E4D2;
 }
 
 .bar-fill {
   height: 14rpx;
-  background: #B4653A;
+  background: #BF512B;
 }
 
 .bar-fill-alt {
-  background: #4E7C74;
+  background: #D98324;
 }
 
 .foot-note {
@@ -97,5 +97,5 @@
   text-align: center;
   font-size: 22rpx;
   letter-spacing: 2rpx;
-  color: #8A9A9B;
+  color: #9C8A76;
 }

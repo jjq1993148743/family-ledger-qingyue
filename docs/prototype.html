@@ -6,11 +6,11 @@
 <title>家庭收支本 · 青月版 | 界面长相稿</title>
 <style>
 :root{
-  --paper:#F4F6F5; --ink:#22323B; --out:#B4653A; --inc:#4E7C74;
-  --line:#C9D3D0; --line2:#E3E9E6; --mute:#8A9A9B; --sub:#4A5B60; --pale:#A9BDB9;
+  --paper:#FBF5EB; --ink:#4A2E1C; --out:#BF512B; --inc:#D98324;
+  --line:#E3D2BA; --line2:#F0E4D2; --mute:#9C8A76; --sub:#7A624C; --pale:#E4CDB0;
 }
 *{box-sizing:border-box}
-body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto Serif SC","STSong","SimSun",serif;line-height:1.65}
+body{margin:0;background:#EFE2CE;color:var(--ink);font-family:"Songti SC","Noto Serif SC","STSong","SimSun",serif;line-height:1.65}
 .num{font-family:Georgia,"Times New Roman",serif;letter-spacing:.02em}
 .wrap{max-width:1300px;margin:0 auto;padding:38px 26px 90px}
 .masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:22px}
@@ -20,16 +20,16 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
 .guide{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin:20px 0 30px;font-size:12px;color:var(--sub)}
 .guide b{font-weight:600;letter-spacing:.12em;color:var(--ink)}
 .sw{display:flex;align-items:center;gap:6px}
-.sw i{width:15px;height:15px;display:inline-block;border:1px solid rgba(34,50,59,.18)}
+.sw i{width:15px;height:15px;display:inline-block;border:1px solid rgba(74,46,28,.18)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px 26px}
-.card{background:#fff;border:1px solid var(--line2);padding:18px 16px 16px;transition:box-shadow .2s,transform .2s}
-.card:hover{box-shadow:0 8px 28px rgba(34,50,59,.12);transform:translateY(-2px)}
-.phone{width:100%;max-width:302px;height:600px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;cursor:zoom-in;box-shadow:0 4px 14px rgba(34,50,59,.08)}
+.card{background:#FFFBF4;border:1px solid var(--line2);padding:18px 16px 16px;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 8px 28px rgba(74,46,28,.12);transform:translateY(-2px)}
+.phone{width:100%;max-width:302px;height:600px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;cursor:zoom-in;box-shadow:0 4px 14px rgba(74,46,28,.08)}
 .status{height:26px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 16px;font-size:10px;color:var(--sub)}
 .navbar{height:34px;flex:none;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.18em}
 .screen{flex:1;overflow-y:auto;padding:14px 14px 20px;scrollbar-width:thin}
 .screen::-webkit-scrollbar{width:3px}.screen::-webkit-scrollbar-thumb{background:var(--line)}
-.tabbar{height:44px;flex:none;display:flex;border-top:1px solid var(--line2);background:#fff}
+.tabbar{height:44px;flex:none;display:flex;border-top:1px solid var(--line2);background:#FFFBF4}
 .tabbar span{flex:1;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.1em;color:var(--mute);border-top:2px solid transparent}
 .tabbar span.on{color:var(--inc);border-top-color:var(--inc)}
 .cap{margin-top:14px;border-top:1px solid var(--line2);padding-top:10px}
@@ -43,7 +43,7 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
 .sumrow{display:flex;gap:7px;margin-top:12px}
 .summain{width:62%;background:var(--ink);color:var(--paper);padding:12px 12px 10px}
 .sumside{flex:1;display:flex;flex-direction:column;gap:7px}
-.sidecell{flex:1;background:#fff;border:1px solid var(--line2);padding:7px 9px;display:flex;flex-direction:column;justify-content:center}
+.sidecell{flex:1;background:#FFFBF4;border:1px solid var(--line2);padding:7px 9px;display:flex;flex-direction:column;justify-content:center}
 .cap-s{font-size:9px;letter-spacing:.18em;color:var(--pale)}
 .big{font-size:25px;margin-top:4px;line-height:1.2}
 .foot-s{font-size:9px;color:var(--pale);margin-top:8px}
@@ -61,7 +61,7 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
 .c{border:1px solid var(--line);padding:3px 9px;font-size:10px;color:var(--sub);letter-spacing:.06em}
 .c.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .c.mini{padding:2px 7px;font-size:9px}
-.field{background:#fff;border-left:3px solid var(--line);padding:6px 9px;font-size:11px;color:var(--sub);display:flex;justify-content:space-between}
+.field{background:#FFFBF4;border-left:3px solid var(--line);padding:6px 9px;font-size:11px;color:var(--sub);display:flex;justify-content:space-between}
 .field.strong{border-left-color:var(--inc)}
 .btn{background:var(--ink);color:var(--paper);text-align:center;padding:8px 0;font-size:12px;letter-spacing:.3em;margin-top:14px}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
@@ -69,7 +69,7 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
 .entry-t{font-size:11px}.entry-n{font-size:9px;color:var(--mute);margin-top:2px}
 .entry-r{text-align:right;font-size:13px}
 .entry-a{font-size:9px;color:var(--mute);margin-top:2px;letter-spacing:.06em}
-.band{background:#fff;border:1px solid var(--line2);padding:7px 9px;font-size:10px;color:var(--sub);display:flex;justify-content:space-between;align-items:center}
+.band{background:#FFFBF4;border:1px solid var(--line2);padding:7px 9px;font-size:10px;color:var(--sub);display:flex;justify-content:space-between;align-items:center}
 .band.warn{border-left:3px solid var(--out)}
 .bar{height:5px;background:var(--line2);margin-top:4px}.bar i{display:block;height:100%;background:var(--inc)}
 .bar i.over{background:var(--out)}
@@ -83,21 +83,21 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
 .log-b{font-size:11px;margin-top:2px}
 .log-d{font-size:10px;color:var(--sub);margin-top:2px}
 .switch{width:32px;height:17px;border-radius:9px;background:var(--line);position:relative;display:inline-block;vertical-align:middle}
-.switch i{position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:#fff}
+.switch i{position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:#FFFBF4}
 .switch.on{background:var(--inc)}.switch.on i{left:17px}
 .check{width:13px;height:13px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:9px;vertical-align:middle;margin-right:6px}
-.check.on{background:var(--ink);border-color:var(--ink);color:#fff}
-.mask{position:absolute;inset:0;background:rgba(34,50,59,.42);display:flex;align-items:flex-end}
+.check.on{background:var(--ink);border-color:var(--ink);color:#FFFBF4}
+.mask{position:absolute;inset:0;background:rgba(74,46,28,.42);display:flex;align-items:flex-end}
 .sheet{background:var(--paper);width:100%;padding:16px 16px 18px;border-top:1px solid var(--line)}
 .sheet h3{margin:0 0 3px;font-size:16px;letter-spacing:.12em;font-weight:600}
 .sheet p{margin:0 0 12px;font-size:10px;color:var(--mute)}
 .sline{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line2);font-size:11px}
-.tip{font-size:9px;color:var(--sub);background:#fff;border-left:3px solid var(--inc);padding:7px 9px;margin-top:10px}
+.tip{font-size:9px;color:var(--sub);background:#FFFBF4;border-left:3px solid var(--inc);padding:7px 9px;margin-top:10px}
 .rel{position:relative;flex:1;display:flex;flex-direction:column;min-height:0}
-#overlay{position:fixed;inset:0;background:rgba(24,36,42,.82);display:none;align-items:center;justify-content:center;z-index:9;padding:24px}
+#overlay{position:fixed;inset:0;background:rgba(58,36,22,.82);display:none;align-items:center;justify-content:center;z-index:9;padding:24px}
 #overlay.on{display:flex}
 #overlay .phone{height:min(88vh,760px);cursor:default;transform:scale(1.02)}
-#overlay .ov-name{position:absolute;top:18px;left:0;right:0;text-align:center;color:#fff;font-size:14px;letter-spacing:.18em}
+#overlay .ov-name{position:absolute;top:18px;left:0;right:0;text-align:center;color:#FFFBF4;font-size:14px;letter-spacing:.18em}
 .footnote{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;font-size:11px;color:var(--sub)}
 </style>
 </head>
@@ -109,13 +109,13 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
   </div>
 
   <div class="guide">
-    <b>沿用现有视觉规范</b>
-    <span class="sw"><i style="background:#F4F6F5"></i>月白打底</span>
-    <span class="sw"><i style="background:#22323B"></i>黛青压场</span>
-    <span class="sw"><i style="background:#B4653A"></i>朱赭记支出</span>
-    <span class="sw"><i style="background:#4E7C74"></i>青瓷记收入</span>
+    <b>暖色调视觉规范</b>
+    <span class="sw"><i style="background:#FBF5EB"></i>米白打底</span>
+    <span class="sw"><i style="background:#4A2E1C"></i>深可可棕压场</span>
+    <span class="sw"><i style="background:#D98324"></i>橘黄主色</span>
+    <span class="sw"><i style="background:#BF512B"></i>赤陶红橘记支出</span>
     <span>中文衬线配 Georgia（数字字体）</span>
-    <span>不用紫色渐变、不用表情图标</span>
+    <span>不用冷色系、不用紫色渐变、不用表情图标</span>
   </div>
 
   <div class="grid">
@@ -159,7 +159,7 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
           <div class="band warn"><span>已删除 1 笔，5 秒内可撤销</span><span class="out">撤销</span></div>
           <div class="field strong" style="margin-top:10px"><span>搜备注、分类、金额</span><span class="mute">筛选</span></div>
           <div class="chips" style="margin-top:8px"><span class="c on mini">全部</span><span class="c mini">分类</span><span class="c mini">成员</span><span class="c mini">账户</span><span class="c mini">日期</span><span class="c mini">金额</span></div>
-          <div class="band" style="margin-top:10px;justify-content:space-around"><span class="num">01</span><span class="num">02</span><span class="num">03</span><span class="num on" style="background:var(--ink);color:#fff;padding:0 5px">04</span><span class="num">05</span><span class="num">06</span><span class="num">07</span></div>
+          <div class="band" style="margin-top:10px;justify-content:space-around"><span class="num">01</span><span class="num">02</span><span class="num">03</span><span class="num on" style="background:var(--ink);color:#FFFBF4;padding:0 5px">04</span><span class="num">05</span><span class="num">06</span><span class="num">07</span></div>
           <div class="grp">2026-11-04 · 周二　支出 112.50</div>
           <div class="entry"><div><div class="entry-t">伙食 · 我</div><div class="entry-n">周末买菜 · 微信 · 有票据</div></div><div class="entry-r out num">-38.50<div class="entry-a">编辑 / 删除</div></div></div>
           <div class="entry"><div><div class="entry-t">出行 · 共同</div><div class="entry-n">地铁 · 支付宝</div></div><div class="entry-r out num">-6.00<div class="entry-a">编辑 / 删除</div></div></div>
@@ -287,7 +287,7 @@ body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto 
 
   </div>
 
-  <div class="footnote">静态长相稿，仅用于看界面；示例数据，不含任何真实账目。配色与排版沿用现有小程序规范，业务代码未改动。</div>
+  <div class="footnote">静态长相稿，仅用于看界面；示例数据，不含任何真实账目。配色已换成暖色橘黄调，小程序现有样式与导航同步换色；新功能尚未实现。</div>
 </div>
 
 <div id="overlay"><div class="ov-name" id="ovName"></div><div id="ovBox"></div></div>

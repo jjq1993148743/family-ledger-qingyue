@@ -1,6 +1,6 @@
 page {
-  background: #F4F6F5;
-  color: #22323B;
+  background: #FBF5EB;
+  color: #4A2E1C;
   font-family: "Songti SC", "Noto Serif SC", "STSong", "SimSun", serif;
   font-size: 28rpx;
   line-height: 1.7;
@@ -14,7 +14,7 @@ page {
 
 .rule-line {
   height: 1rpx;
-  background: #C9D3D0;
+  background: #E3D2BA;
 }
 
 .num {
@@ -23,32 +23,32 @@ page {
 }
 
 .income {
-  color: #4E7C74;
+  color: #D98324;
 }
 
 .outgo {
-  color: #B4653A;
+  color: #BF512B;
 }
 
 .chip {
   display: inline-block;
   padding: 10rpx 26rpx;
   margin: 0 16rpx 16rpx 0;
-  border: 1rpx solid #C9D3D0;
-  color: #4A5B60;
+  border: 1rpx solid #E3D2BA;
+  color: #7A624C;
   font-size: 26rpx;
   letter-spacing: 2rpx;
 }
 
 .chip-on {
-  border-color: #22323B;
-  background: #22323B;
-  color: #F4F6F5;
+  border-color: #4A2E1C;
+  background: #4A2E1C;
+  color: #FBF5EB;
 }
 
 .btn-primary {
-  background: #22323B;
-  color: #F4F6F5;
+  background: #4A2E1C;
+  color: #FBF5EB;
   border-radius: 2rpx;
   letter-spacing: 8rpx;
 }
@@ -61,12 +61,12 @@ page {
   margin: 48rpx 0 24rpx;
   font-size: 26rpx;
   letter-spacing: 6rpx;
-  color: #4E7C74;
+  color: #D98324;
 }
 
 .empty {
   padding: 64rpx 0;
   text-align: center;
   font-size: 26rpx;
-  color: #8A9A9B;
+  color: #9C8A76;
 }
