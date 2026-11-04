@@ -9,7 +9,7 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 20rpx;
   letter-spacing: 4rpx;
-  color: #9C8A76;
+  color: #756A5E;
 }
 
 .head-title {
@@ -22,9 +22,9 @@
 .month-chip {
   margin-top: 12rpx;
   padding: 8rpx 18rpx;
-  border: 1rpx solid #E3D2BA;
+  border: 1rpx solid #DED5C8;
   font-size: 24rpx;
-  color: #7A624C;
+  color: #5F5246;
 }
 
 .summary-row {
@@ -36,15 +36,15 @@
 .summary-main {
   width: 62%;
   padding: 36rpx 30rpx 30rpx;
-  background: #4A2E1C;
-  color: #FBF5EB;
+  background: #332720;
+  color: #F8F5F0;
   box-sizing: border-box;
 }
 
 .summary-caption {
   font-size: 24rpx;
   letter-spacing: 4rpx;
-  color: #E4CDB0;
+  color: #C9BCAC;
 }
 
 .summary-big {
@@ -56,7 +56,7 @@
 .summary-foot {
   margin-top: 24rpx;
   font-size: 22rpx;
-  color: #E4CDB0;
+  color: #C9BCAC;
 }
 
 .summary-side {
@@ -70,8 +70,8 @@
 .side-cell {
   flex: 1;
   padding: 18rpx 20rpx;
-  background: #FFFBF4;
-  border: 1rpx solid #F0E4D2;
+  background: #FFFFFF;
+  border: 1rpx solid #EDE7DE;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,7 +83,7 @@
 
 .side-caption {
   font-size: 22rpx;
-  color: #9C8A76;
+  color: #756A5E;
   letter-spacing: 2rpx;
 }
 
@@ -102,24 +102,24 @@
   text-align: center;
   font-size: 28rpx;
   letter-spacing: 6rpx;
-  border: 1rpx solid #E3D2BA;
-  color: #7A624C;
+  border: 1rpx solid #DED5C8;
+  color: #5F5246;
   margin-right: 20rpx;
 }
 
 .type-on {
-  color: #FBF5EB;
-  border-color: #4A2E1C;
+  color: #F8F5F0;
+  border-color: #332720;
 }
 
 .expense-on {
-  background: #BF512B;
-  border-color: #BF512B;
+  background: #C4432B;
+  border-color: #C4432B;
 }
 
 .income-on {
-  background: #D98324;
-  border-color: #D98324;
+  background: #8B691C;
+  border-color: #8B691C;
 }
 
 .amount-row {
@@ -127,12 +127,12 @@
   align-items: center;
   margin-top: 32rpx;
   padding-bottom: 16rpx;
-  border-bottom: 2rpx solid #4A2E1C;
+  border-bottom: 2rpx solid #332720;
 }
 
 .amount-mark {
   font-size: 40rpx;
-  color: #9C8A76;
+  color: #756A5E;
 }
 
 .amount-input {
@@ -147,7 +147,7 @@
   margin: 32rpx 0 16rpx;
   font-size: 24rpx;
   letter-spacing: 4rpx;
-  color: #9C8A76;
+  color: #756A5E;
 }
 
 .chip-row {
@@ -159,8 +159,8 @@
   width: 100%;
   padding: 20rpx 24rpx;
   box-sizing: border-box;
-  background: #FFFBF4;
-  border-left: 4rpx solid #E3D2BA;
+  background: #FFFFFF;
+  border-left: 4rpx solid #DED5C8;
   font-size: 28rpx;
   height: 84rpx;
 }
@@ -177,7 +177,7 @@
   display: flex;
   justify-content: space-between;
   padding: 24rpx 0;
-  border-bottom: 1rpx solid #F0E4D2;
+  border-bottom: 1rpx solid #EDE7DE;
 }
 
 .entry-cat {
@@ -187,13 +187,13 @@
 
 .entry-member {
   font-size: 24rpx;
-  color: #9C8A76;
+  color: #756A5E;
 }
 
 .entry-note {
   margin-top: 8rpx;
   font-size: 24rpx;
-  color: #9C8A76;
+  color: #756A5E;
 }
 
 .entry-right {
@@ -210,6 +210,6 @@
 .entry-del {
   margin-top: 8rpx;
   font-size: 22rpx;
-  color: #C4AF95;
+  color: #A99A8B;
   letter-spacing: 2rpx;
 }

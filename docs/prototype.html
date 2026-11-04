@@ -6,11 +6,11 @@
 <title>家庭收支本 · 青月版 | 界面长相稿</title>
 <style>
 :root{
-  --paper:#FBF5EB; --ink:#4A2E1C; --out:#BF512B; --inc:#D98324;
-  --line:#E3D2BA; --line2:#F0E4D2; --mute:#9C8A76; --sub:#7A624C; --pale:#E4CDB0;
+  --paper:#F8F5F0; --ink:#332720; --out:#C4432B; --main:#E9862A; --gold:#8B691C; --card:#FFFFFF;
+  --line:#DED5C8; --line2:#EDE7DE; --mute:#756A5E; --sub:#5F5246; --pale:#C9BCAC;
 }
 *{box-sizing:border-box}
-body{margin:0;background:#EFE2CE;color:var(--ink);font-family:"Songti SC","Noto Serif SC","STSong","SimSun",serif;line-height:1.65}
+body{margin:0;background:#E8E2D8;color:var(--ink);font-family:"Songti SC","Noto Serif SC","STSong","SimSun",serif;line-height:1.65}
 .num{font-family:Georgia,"Times New Roman",serif;letter-spacing:.02em}
 .wrap{max-width:1300px;margin:0 auto;padding:38px 26px 90px}
 .masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:22px}
@@ -20,37 +20,37 @@ body{margin:0;background:#EFE2CE;color:var(--ink);font-family:"Songti SC","Noto 
 .guide{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin:20px 0 30px;font-size:12px;color:var(--sub)}
 .guide b{font-weight:600;letter-spacing:.12em;color:var(--ink)}
 .sw{display:flex;align-items:center;gap:6px}
-.sw i{width:15px;height:15px;display:inline-block;border:1px solid rgba(74,46,28,.18)}
+.sw i{width:15px;height:15px;display:inline-block;border:1px solid rgba(51,39,32,.18)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px 26px}
-.card{background:#FFFBF4;border:1px solid var(--line2);padding:18px 16px 16px;transition:box-shadow .2s,transform .2s}
-.card:hover{box-shadow:0 8px 28px rgba(74,46,28,.12);transform:translateY(-2px)}
-.phone{width:100%;max-width:302px;height:600px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;cursor:zoom-in;box-shadow:0 4px 14px rgba(74,46,28,.08)}
+.card{background:var(--card);border:1px solid var(--line2);padding:18px 16px 16px;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 8px 28px rgba(51,39,32,.12);transform:translateY(-2px)}
+.phone{width:100%;max-width:302px;height:600px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;cursor:zoom-in;box-shadow:0 4px 14px rgba(51,39,32,.08)}
 .status{height:26px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 16px;font-size:10px;color:var(--sub)}
 .navbar{height:34px;flex:none;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.18em}
 .screen{flex:1;overflow-y:auto;padding:14px 14px 20px;scrollbar-width:thin}
 .screen::-webkit-scrollbar{width:3px}.screen::-webkit-scrollbar-thumb{background:var(--line)}
-.tabbar{height:44px;flex:none;display:flex;border-top:1px solid var(--line2);background:#FFFBF4}
+.tabbar{height:44px;flex:none;display:flex;border-top:1px solid var(--line2);background:#FFFFFF}
 .tabbar span{flex:1;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.1em;color:var(--mute);border-top:2px solid transparent}
-.tabbar span.on{color:var(--inc);border-top-color:var(--inc)}
+.tabbar span.on{color:var(--ink);border-top-color:var(--main)}
 .cap{margin-top:14px;border-top:1px solid var(--line2);padding-top:10px}
 .cap b{display:block;font-size:15px;letter-spacing:.1em}
 .cap span{display:block;font-size:12px;color:var(--sub);margin-top:4px}
 .head{display:flex;justify-content:space-between;align-items:flex-start}
 .head-sub{font-family:Georgia,serif;font-size:8px;letter-spacing:.22em;color:var(--mute)}
 .head-title{font-size:24px;font-weight:600;letter-spacing:.14em;margin-top:2px}
-.chip-month{border:1px solid var(--line);padding:3px 8px;font-size:10px;color:var(--sub);margin-top:6px}
-.rule{height:1px;background:var(--line);margin:10px 0}
+.chip-month{background:var(--out);color:#FFFFFF;padding:5px 9px;font-size:10px;letter-spacing:.08em;margin-top:6px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.rule{height:1px;background:var(--line);margin:10px 0;box-shadow:0 3px 0 var(--line2)}
 .sumrow{display:flex;gap:7px;margin-top:12px}
 .summain{width:62%;background:var(--ink);color:var(--paper);padding:12px 12px 10px}
 .sumside{flex:1;display:flex;flex-direction:column;gap:7px}
-.sidecell{flex:1;background:#FFFBF4;border:1px solid var(--line2);padding:7px 9px;display:flex;flex-direction:column;justify-content:center}
+.sidecell{flex:1;background:#FFFFFF;border:1px solid var(--line2);padding:7px 9px;display:flex;flex-direction:column;justify-content:center}
 .cap-s{font-size:9px;letter-spacing:.18em;color:var(--pale)}
 .big{font-size:25px;margin-top:4px;line-height:1.2}
 .foot-s{font-size:9px;color:var(--pale);margin-top:8px}
 .side-cap{font-size:9px;color:var(--mute);letter-spacing:.1em}
 .side-val{font-size:13px;margin-top:2px}
-.out{color:var(--out)}.inc{color:var(--inc)}.mute{color:var(--mute)}.sub{color:var(--sub)}
-.label{margin:16px 0 7px;font-size:10px;letter-spacing:.22em;color:var(--inc)}
+.out{color:var(--out)}.inc{color:var(--gold)}.mute{color:var(--mute)}.sub{color:var(--sub)}
+.label{margin:16px 0 7px;font-size:10px;letter-spacing:.22em;color:var(--sub)}
 .types{display:flex;gap:8px}
 .tbtn{border:1px solid var(--line);padding:4px 0;width:68px;text-align:center;font-size:12px;letter-spacing:.18em;color:var(--sub)}
 .tbtn.on{background:var(--out);border-color:var(--out);color:var(--paper)}
@@ -61,43 +61,43 @@ body{margin:0;background:#EFE2CE;color:var(--ink);font-family:"Songti SC","Noto 
 .c{border:1px solid var(--line);padding:3px 9px;font-size:10px;color:var(--sub);letter-spacing:.06em}
 .c.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .c.mini{padding:2px 7px;font-size:9px}
-.field{background:#FFFBF4;border-left:3px solid var(--line);padding:6px 9px;font-size:11px;color:var(--sub);display:flex;justify-content:space-between}
-.field.strong{border-left-color:var(--inc)}
-.btn{background:var(--ink);color:var(--paper);text-align:center;padding:8px 0;font-size:12px;letter-spacing:.3em;margin-top:14px}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.field{background:#FFFFFF;border-left:3px solid var(--line);padding:6px 9px;font-size:11px;color:var(--sub);display:flex;justify-content:space-between}
+.field.strong{border-left-color:var(--main)}
+.btn{background:var(--main);color:var(--ink);text-align:center;padding:8px 0;font-size:12px;letter-spacing:.3em;margin-top:14px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--main)}
 .entry{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line2)}
 .entry-t{font-size:11px}.entry-n{font-size:9px;color:var(--mute);margin-top:2px}
 .entry-r{text-align:right;font-size:13px}
 .entry-a{font-size:9px;color:var(--mute);margin-top:2px;letter-spacing:.06em}
-.band{background:#FFFBF4;border:1px solid var(--line2);padding:7px 9px;font-size:10px;color:var(--sub);display:flex;justify-content:space-between;align-items:center}
+.band{background:#FFFFFF;border:1px solid var(--line2);padding:7px 9px;font-size:10px;color:var(--sub);display:flex;justify-content:space-between;align-items:center}
 .band.warn{border-left:3px solid var(--out)}
-.bar{height:5px;background:var(--line2);margin-top:4px}.bar i{display:block;height:100%;background:var(--inc)}
+.bar{height:5px;background:var(--line2);margin-top:4px}.bar i{display:block;height:100%;background:var(--main)}
 .bar i.over{background:var(--out)}
 .rowline{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line2);font-size:11px}
 .rowline small{color:var(--mute);font-size:9px}
 .arrow{color:var(--mute);font-size:11px}
-.grp{margin:14px 0 5px;font-size:10px;letter-spacing:.22em;color:var(--inc)}
+.grp{margin:14px 0 5px;font-size:10px;letter-spacing:.22em;color:var(--sub)}
 .log{position:relative;padding-left:12px;border-left:1px solid var(--line);margin:10px 0}
-.log:before{content:"";position:absolute;left:-3px;top:6px;width:5px;height:5px;background:var(--inc)}
+.log:before{content:"";position:absolute;left:-3px;top:6px;width:5px;height:5px;background:var(--main)}
 .log-t{font-size:9px;color:var(--mute)}
 .log-b{font-size:11px;margin-top:2px}
 .log-d{font-size:10px;color:var(--sub);margin-top:2px}
 .switch{width:32px;height:17px;border-radius:9px;background:var(--line);position:relative;display:inline-block;vertical-align:middle}
-.switch i{position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:#FFFBF4}
-.switch.on{background:var(--inc)}.switch.on i{left:17px}
+.switch i{position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:#FFFFFF}
+.switch.on{background:var(--main)}.switch.on i{left:17px}
 .check{width:13px;height:13px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:9px;vertical-align:middle;margin-right:6px}
-.check.on{background:var(--ink);border-color:var(--ink);color:#FFFBF4}
-.mask{position:absolute;inset:0;background:rgba(74,46,28,.42);display:flex;align-items:flex-end}
+.check.on{background:var(--ink);border-color:var(--ink);color:#FFFFFF}
+.mask{position:absolute;inset:0;background:rgba(51,39,32,.42);display:flex;align-items:flex-end}
 .sheet{background:var(--paper);width:100%;padding:16px 16px 18px;border-top:1px solid var(--line)}
 .sheet h3{margin:0 0 3px;font-size:16px;letter-spacing:.12em;font-weight:600}
 .sheet p{margin:0 0 12px;font-size:10px;color:var(--mute)}
 .sline{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line2);font-size:11px}
-.tip{font-size:9px;color:var(--sub);background:#FFFBF4;border-left:3px solid var(--inc);padding:7px 9px;margin-top:10px}
+.tip{font-size:9px;color:var(--sub);background:#FFFFFF;border-left:3px solid var(--main);padding:7px 9px;margin-top:10px}
 .rel{position:relative;flex:1;display:flex;flex-direction:column;min-height:0}
-#overlay{position:fixed;inset:0;background:rgba(58,36,22,.82);display:none;align-items:center;justify-content:center;z-index:9;padding:24px}
+#overlay{position:fixed;inset:0;background:rgba(38,29,24,.86);display:none;align-items:center;justify-content:center;z-index:9;padding:24px}
 #overlay.on{display:flex}
 #overlay .phone{height:min(88vh,760px);cursor:default;transform:scale(1.02)}
-#overlay .ov-name{position:absolute;top:18px;left:0;right:0;text-align:center;color:#FFFBF4;font-size:14px;letter-spacing:.18em}
+#overlay .ov-name{position:absolute;top:18px;left:0;right:0;text-align:center;color:#FFFFFF;font-size:14px;letter-spacing:.18em}
 .footnote{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;font-size:11px;color:var(--sub)}
 </style>
 </head>
@@ -109,13 +109,14 @@ body{margin:0;background:#EFE2CE;color:var(--ink);font-family:"Songti SC","Noto 
   </div>
 
   <div class="guide">
-    <b>暖色调视觉规范</b>
-    <span class="sw"><i style="background:#FBF5EB"></i>米白打底</span>
-    <span class="sw"><i style="background:#4A2E1C"></i>深可可棕压场</span>
-    <span class="sw"><i style="background:#D98324"></i>橘黄主色</span>
-    <span class="sw"><i style="background:#BF512B"></i>赤陶红橘记支出</span>
+    <b>配色 · 灯下账本</b>
+    <span class="sw"><i style="background:#F8F5F0"></i>瓷白纸面</span>
+    <span class="sw"><i style="background:#332720"></i>炭焙压场</span>
+    <span class="sw"><i style="background:#E9862A"></i>蜜橘高光</span>
+    <span class="sw"><i style="background:#C4432B"></i>朱砂记支出</span>
+    <span class="sw"><i style="background:#8B691C"></i>陈金记收入</span>
     <span>中文衬线配 Georgia（数字字体）</span>
-    <span>不用冷色系、不用紫色渐变、不用表情图标</span>
+    <span>暖色但不用一片棕 · 中性暖灰分层 · 不用冷色系</span>
   </div>
 
   <div class="grid">
@@ -159,7 +160,7 @@ body{margin:0;background:#EFE2CE;color:var(--ink);font-family:"Songti SC","Noto 
           <div class="band warn"><span>已删除 1 笔，5 秒内可撤销</span><span class="out">撤销</span></div>
           <div class="field strong" style="margin-top:10px"><span>搜备注、分类、金额</span><span class="mute">筛选</span></div>
           <div class="chips" style="margin-top:8px"><span class="c on mini">全部</span><span class="c mini">分类</span><span class="c mini">成员</span><span class="c mini">账户</span><span class="c mini">日期</span><span class="c mini">金额</span></div>
-          <div class="band" style="margin-top:10px;justify-content:space-around"><span class="num">01</span><span class="num">02</span><span class="num">03</span><span class="num on" style="background:var(--ink);color:#FFFBF4;padding:0 5px">04</span><span class="num">05</span><span class="num">06</span><span class="num">07</span></div>
+          <div class="band" style="margin-top:10px;justify-content:space-around"><span class="num">01</span><span class="num">02</span><span class="num">03</span><span class="num on" style="background:var(--ink);color:#FFFFFF;padding:0 5px">04</span><span class="num">05</span><span class="num">06</span><span class="num">07</span></div>
           <div class="grp">2026-11-04 · 周二　支出 112.50</div>
           <div class="entry"><div><div class="entry-t">伙食 · 我</div><div class="entry-n">周末买菜 · 微信 · 有票据</div></div><div class="entry-r out num">-38.50<div class="entry-a">编辑 / 删除</div></div></div>
           <div class="entry"><div><div class="entry-t">出行 · 共同</div><div class="entry-n">地铁 · 支付宝</div></div><div class="entry-r out num">-6.00<div class="entry-a">编辑 / 删除</div></div></div>

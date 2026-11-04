@@ -5,15 +5,15 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#4A2E1C",
+    "navigationBarBackgroundColor": "#332720",
     "navigationBarTitleText": "家庭收支本 · 青月版",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#FBF5EB"
+    "backgroundColor": "#F8F5F0"
   },
   "tabBar": {
-    "color": "#9C8A76",
-    "selectedColor": "#D98324",
-    "backgroundColor": "#FFFBF4",
+    "color": "#756A5E",
+    "selectedColor": "#E9862A",
+    "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
     "list": [
       { "pagePath": "pages/ledger/ledger", "text": "账本" },
