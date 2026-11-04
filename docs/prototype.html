@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>家庭收支本 · 青月版 | 界面长相稿</title>
+<style>
+:root{
+  --paper:#F4F6F5; --ink:#22323B; --out:#B4653A; --inc:#4E7C74;
+  --line:#C9D3D0; --line2:#E3E9E6; --mute:#8A9A9B; --sub:#4A5B60; --pale:#A9BDB9;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#E8EDEB;color:var(--ink);font-family:"Songti SC","Noto Serif SC","STSong","SimSun",serif;line-height:1.65}
+.num{font-family:Georgia,"Times New Roman",serif;letter-spacing:.02em}
+.wrap{max-width:1300px;margin:0 auto;padding:38px 26px 90px}
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:22px}
+.mast-sub{font-family:Georgia,serif;letter-spacing:.28em;font-size:11px;color:var(--mute)}
+.mast-title{font-size:38px;font-weight:600;letter-spacing:.16em;margin-top:8px}
+.mast-note{font-size:13px;color:var(--sub);max-width:520px;text-align:right;line-height:1.9}
+.guide{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin:20px 0 30px;font-size:12px;color:var(--sub)}
+.guide b{font-weight:600;letter-spacing:.12em;color:var(--ink)}
+.sw{display:flex;align-items:center;gap:6px}
+.sw i{width:15px;height:15px;display:inline-block;border:1px solid rgba(34,50,59,.18)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px 26px}
+.card{background:#fff;border:1px solid var(--line2);padding:18px 16px 16px;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 8px 28px rgba(34,50,59,.12);transform:translateY(-2px)}
+.phone{width:100%;max-width:302px;height:600px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;cursor:zoom-in;box-shadow:0 4px 14px rgba(34,50,59,.08)}
+.status{height:26px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 16px;font-size:10px;color:var(--sub)}
+.navbar{height:34px;flex:none;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.18em}
+.screen{flex:1;overflow-y:auto;padding:14px 14px 20px;scrollbar-width:thin}
+.screen::-webkit-scrollbar{width:3px}.screen::-webkit-scrollbar-thumb{background:var(--line)}
+.tabbar{height:44px;flex:none;display:flex;border-top:1px solid var(--line2);background:#fff}
+.tabbar span{flex:1;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.1em;color:var(--mute);border-top:2px solid transparent}
+.tabbar span.on{color:var(--inc);border-top-color:var(--inc)}
+.cap{margin-top:14px;border-top:1px solid var(--line2);padding-top:10px}
+.cap b{display:block;font-size:15px;letter-spacing:.1em}
+.cap span{display:block;font-size:12px;color:var(--sub);margin-top:4px}
+.head{display:flex;justify-content:space-between;align-items:flex-start}
+.head-sub{font-family:Georgia,serif;font-size:8px;letter-spacing:.22em;color:var(--mute)}
+.head-title{font-size:24px;font-weight:600;letter-spacing:.14em;margin-top:2px}
+.chip-month{border:1px solid var(--line);padding:3px 8px;font-size:10px;color:var(--sub);margin-top:6px}
+.rule{height:1px;background:var(--line);margin:10px 0}
+.sumrow{display:flex;gap:7px;margin-top:12px}
+.summain{width:62%;background:var(--ink);color:var(--paper);padding:12px 12px 10px}
+.sumside{flex:1;display:flex;flex-direction:column;gap:7px}
+.sidecell{flex:1;background:#fff;border:1px solid var(--line2);padding:7px 9px;display:flex;flex-direction:column;justify-content:center}
+.cap-s{font-size:9px;letter-spacing:.18em;color:var(--pale)}
+.big{font-size:25px;margin-top:4px;line-height:1.2}
+.foot-s{font-size:9px;color:var(--pale);margin-top:8px}
+.side-cap{font-size:9px;color:var(--mute);letter-spacing:.1em}
+.side-val{font-size:13px;margin-top:2px}
+.out{color:var(--out)}.inc{color:var(--inc)}.mute{color:var(--mute)}.sub{color:var(--sub)}
+.label{margin:16px 0 7px;font-size:10px;letter-spacing:.22em;color:var(--inc)}
+.types{display:flex;gap:8px}
+.tbtn{border:1px solid var(--line);padding:4px 0;width:68px;text-align:center;font-size:12px;letter-spacing:.18em;color:var(--sub)}
+.tbtn.on{background:var(--out);border-color:var(--out);color:var(--paper)}
+.amount{border-bottom:2px solid var(--ink);padding:6px 0 5px;margin-top:10px;display:flex;align-items:baseline}
+.amount span{font-size:17px;color:var(--mute);margin-right:8px}
+.amount b{font-size:26px;font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.c{border:1px solid var(--line);padding:3px 9px;font-size:10px;color:var(--sub);letter-spacing:.06em}
+.c.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.c.mini{padding:2px 7px;font-size:9px}
+.field{background:#fff;border-left:3px solid var(--line);padding:6px 9px;font-size:11px;color:var(--sub);display:flex;justify-content:space-between}
+.field.strong{border-left-color:var(--inc)}
+.btn{background:var(--ink);color:var(--paper);text-align:center;padding:8px 0;font-size:12px;letter-spacing:.3em;margin-top:14px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.entry{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line2)}
+.entry-t{font-size:11px}.entry-n{font-size:9px;color:var(--mute);margin-top:2px}
+.entry-r{text-align:right;font-size:13px}
+.entry-a{font-size:9px;color:var(--mute);margin-top:2px;letter-spacing:.06em}
+.band{background:#fff;border:1px solid var(--line2);padding:7px 9px;font-size:10px;color:var(--sub);display:flex;justify-content:space-between;align-items:center}
+.band.warn{border-left:3px solid var(--out)}
+.bar{height:5px;background:var(--line2);margin-top:4px}.bar i{display:block;height:100%;background:var(--inc)}
+.bar i.over{background:var(--out)}
+.rowline{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line2);font-size:11px}
+.rowline small{color:var(--mute);font-size:9px}
+.arrow{color:var(--mute);font-size:11px}
+.grp{margin:14px 0 5px;font-size:10px;letter-spacing:.22em;color:var(--inc)}
+.log{position:relative;padding-left:12px;border-left:1px solid var(--line);margin:10px 0}
+.log:before{content:"";position:absolute;left:-3px;top:6px;width:5px;height:5px;background:var(--inc)}
+.log-t{font-size:9px;color:var(--mute)}
+.log-b{font-size:11px;margin-top:2px}
+.log-d{font-size:10px;color:var(--sub);margin-top:2px}
+.switch{width:32px;height:17px;border-radius:9px;background:var(--line);position:relative;display:inline-block;vertical-align:middle}
+.switch i{position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:#fff}
+.switch.on{background:var(--inc)}.switch.on i{left:17px}
+.check{width:13px;height:13px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:9px;vertical-align:middle;margin-right:6px}
+.check.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.mask{position:absolute;inset:0;background:rgba(34,50,59,.42);display:flex;align-items:flex-end}
+.sheet{background:var(--paper);width:100%;padding:16px 16px 18px;border-top:1px solid var(--line)}
+.sheet h3{margin:0 0 3px;font-size:16px;letter-spacing:.12em;font-weight:600}
+.sheet p{margin:0 0 12px;font-size:10px;color:var(--mute)}
+.sline{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line2);font-size:11px}
+.tip{font-size:9px;color:var(--sub);background:#fff;border-left:3px solid var(--inc);padding:7px 9px;margin-top:10px}
+.rel{position:relative;flex:1;display:flex;flex-direction:column;min-height:0}
+#overlay{position:fixed;inset:0;background:rgba(24,36,42,.82);display:none;align-items:center;justify-content:center;z-index:9;padding:24px}
+#overlay.on{display:flex}
+#overlay .phone{height:min(88vh,760px);cursor:default;transform:scale(1.02)}
+#overlay .ov-name{position:absolute;top:18px;left:0;right:0;text-align:center;color:#fff;font-size:14px;letter-spacing:.18em}
+.footnote{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;font-size:11px;color:var(--sub)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div><div class="mast-sub">QING YUE · FAMILY LEDGER</div><div class="mast-title">家庭收支本 · 青月版</div></div>
+    <div class="mast-note">界面长相稿 · 静态原型 · 数据全是示例<br>业务代码尚未实现，点任一屏可放大看</div>
+  </div>
+
+  <div class="guide">
+    <b>沿用现有视觉规范</b>
+    <span class="sw"><i style="background:#F4F6F5"></i>月白打底</span>
+    <span class="sw"><i style="background:#22323B"></i>黛青压场</span>
+    <span class="sw"><i style="background:#B4653A"></i>朱赭记支出</span>
+    <span class="sw"><i style="background:#4E7C74"></i>青瓷记收入</span>
+    <span>中文衬线配 Georgia（数字字体）</span>
+    <span>不用紫色渐变、不用表情图标</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="phone" data-name="壹 · 账本页（记一笔）">
+        <div class="status num"><span>9:41</span><span>· · ·</span></div>
+        <div class="navbar">家庭收支本 · 青月版</div>
+        <div class="screen">
+          <div class="head"><div><div class="head-sub">QING YUE · FAMILY LEDGER</div><div class="head-title">家庭收支本</div></div><div class="chip-month num">2026-11</div></div>
+          <div class="rule"></div>
+          <div class="sumrow">
+            <div class="summain"><div class="cap-s">本月支出</div><div class="big num">2,486.50</div><div class="foot-s">共 42 笔 · 预算余 513.50</div></div>
+            <div class="sumside"><div class="sidecell"><div class="side-cap">收入</div><div class="side-val num inc">+8,500.00</div></div><div class="sidecell"><div class="side-cap">结余</div><div class="side-val num">6,013.50</div></div></div>
+          </div>
+          <div class="label">壹 · 记一笔</div>
+          <div class="types"><div class="tbtn on">支出</div><div class="tbtn">收入</div></div>
+          <div class="amount"><span class="num">¥</span><b class="num">38.50</b></div>
+          <div class="label" style="margin:11px 0 6px">分类</div>
+          <div class="chips"><span class="c on">伙食</span><span class="c">日用</span><span class="c">居家</span><span class="c">出行</span><span class="c">自定义 +</span></div>
+          <div class="label" style="margin:11px 0 6px">账户 · 谁记的 · 日期</div>
+          <div class="chips"><span class="c on mini">微信</span><span class="c mini">现金</span><span class="c mini">银行卡</span><span class="c on mini">我</span><span class="c mini">家人</span><span class="c mini">共同</span></div>
+          <div class="field" style="margin-top:6px"><span>日期 2026-11-04 可改</span><span class="mute">选一天 &gt;</span></div>
+          <div class="field" style="margin-top:6px"><span>周末买菜</span><span class="mute">+ 票据</span></div>
+          <div class="band" style="margin-top:8px"><span>常用模板：买菜 · 通勤 · 工资</span><span class="arrow">&gt;</span></div>
+          <div class="btn">记 下</div>
+          <div class="label">贰 · 近几笔</div>
+          <div class="entry"><div><div class="entry-t">伙食 · 我</div><div class="entry-n">周末买菜 · 微信</div></div><div class="entry-r out num">-38.50<div class="entry-a">编辑 / 删除</div></div></div>
+          <div class="entry"><div><div class="entry-t">工资 · 共同</div><div class="entry-n">十一月薪资 · 银行卡</div></div><div class="entry-r inc num">+8,500.00<div class="entry-a">编辑 / 删除</div></div></div>
+        </div>
+        <div class="tabbar"><span class="on">账本</span><span>流水</span><span>月结</span><span>我的</span></div>
+      </div>
+      <div class="cap"><b>壹 · 账本页</b><span>记一笔全字段：金额、分类、账户、成员、可改日期、备注、票据、模板；顶部带预算余量。</span></div>
+    </div>
+
+    <div class="card">
+      <div class="phone" data-name="贰 · 流水页（明细与筛选）">
+        <div class="status num"><span>9:41</span><span>· · ·</span></div>
+        <div class="navbar">流水</div>
+        <div class="screen">
+          <div class="band warn"><span>已删除 1 笔，5 秒内可撤销</span><span class="out">撤销</span></div>
+          <div class="field strong" style="margin-top:10px"><span>搜备注、分类、金额</span><span class="mute">筛选</span></div>
+          <div class="chips" style="margin-top:8px"><span class="c on mini">全部</span><span class="c mini">分类</span><span class="c mini">成员</span><span class="c mini">账户</span><span class="c mini">日期</span><span class="c mini">金额</span></div>
+          <div class="band" style="margin-top:10px;justify-content:space-around"><span class="num">01</span><span class="num">02</span><span class="num">03</span><span class="num on" style="background:var(--ink);color:#fff;padding:0 5px">04</span><span class="num">05</span><span class="num">06</span><span class="num">07</span></div>
+          <div class="grp">2026-11-04 · 周二　支出 112.50</div>
+          <div class="entry"><div><div class="entry-t">伙食 · 我</div><div class="entry-n">周末买菜 · 微信 · 有票据</div></div><div class="entry-r out num">-38.50<div class="entry-a">编辑 / 删除</div></div></div>
+          <div class="entry"><div><div class="entry-t">出行 · 共同</div><div class="entry-n">地铁 · 支付宝</div></div><div class="entry-r out num">-6.00<div class="entry-a">编辑 / 删除</div></div></div>
+          <div class="entry"><div><div class="entry-t">日用 · 家人</div><div class="entry-n">纸巾 · 现金</div></div><div class="entry-r out num">-68.00<div class="entry-a">编辑 / 删除</div></div></div>
+          <div class="grp">2026-11-03 · 周一　支出 46.00</div>
+          <div class="entry"><div><div class="entry-t">伙食 · 我</div><div class="entry-n">早饭 · 微信</div></div><div class="entry-r out num">-12.00<div class="entry-a">编辑 / 删除</div></div></div>
+          <div class="entry"><div><div class="entry-t">医疗 · 家人</div><div class="entry-n">药店 · 银行卡</div></div><div class="entry-r out num">-34.00<div class="entry-a">编辑 / 删除</div></div></div>
+          <div class="band" style="margin-top:12px"><span>共 42 笔，按日分组，不限 8 笔</span><span class="arrow">&gt;</span></div>
+        </div>
+        <div class="tabbar"><span>账本</span><span class="on">流水</span><span>月结</span><span>我的</span></div>
+      </div>
+      <div class="cap"><b>贰 · 流水页</b><span>全量账目按日分组、日历跳转、多条件筛选、编辑删除、误删撤销、票据原图。</span></div>
+    </div>
+
+    <div class="card">
+      <div class="phone" data-name="叁 · 月结页（复盘与预算）">
+        <div class="status num"><span>9:41</span><span>· · ·</span></div>
+        <div class="navbar">月结</div>
+        <div class="screen">
+          <div class="head"><div><div class="head-sub">MONTHLY</div><div class="head-title">月 结</div></div><div class="chip-month num">‹ 2026-11 ›</div></div>
+          <div class="rule"></div>
+          <div class="sumrow">
+            <div class="summain"><div class="cap-s">本月支出</div><div class="big num">2,486.50</div><div class="foot-s">共 42 笔</div></div>
+            <div class="sumside"><div class="sidecell"><div class="side-cap">收入</div><div class="side-val num inc">+8,500.00</div></div><div class="sidecell"><div class="side-cap">结余</div><div class="side-val num">6,013.50</div></div></div>
+          </div>
+          <div class="label">壹 · 钱花在哪</div>
+          <div class="chips"><span class="c on mini">按分类</span><span class="c mini">按成员</span><span class="c mini">按账户</span><span class="c mini">按账本</span></div>
+          <div style="margin-top:10px"><div class="rowline"><span>伙食</span><span class="num">1,045.00　42%</span></div><div class="bar"><i style="width:42%"></i></div></div>
+          <div style="margin-top:8px"><div class="rowline"><span>居家</span><span class="num">621.00　25%</span></div><div class="bar"><i style="width:25%"></i></div></div>
+          <div style="margin-top:8px"><div class="rowline"><span>出行</span><span class="num">447.00　18%</span></div><div class="bar"><i style="width:18%"></i></div></div>
+          <div class="label">贰 · 预算执行</div>
+          <div class="band"><span>伙食 1,045 / 1,200</span><span class="inc">还剩 155</span></div>
+          <div class="bar"><i style="width:87%"></i></div>
+          <div class="band" style="margin-top:8px"><span>出行 447 / 400</span><span class="out">超支 47</span></div>
+          <div class="bar"><i class="over" style="width:100%"></i></div>
+          <div class="tip">点任一分类可下钻到该分类的流水，看是哪笔记多了。</div>
+        </div>
+        <div class="tabbar"><span>账本</span><span>流水</span><span class="on">月结</span><span>我的</span></div>
+      </div>
+      <div class="cap"><b>叁 · 月结页</b><span>切月份看收支结余、分类/成员/账户/账本占比、预算执行与超支标红、下钻明细。</span></div>
+    </div>
+
+    <div class="card">
+      <div class="phone" data-name="肆 · 操作流水页（改动留痕）">
+        <div class="status num"><span>9:41</span><span>· · ·</span></div>
+        <div class="navbar">操作流水</div>
+        <div class="screen">
+          <div class="head"><div><div class="head-sub">HISTORY</div><div class="head-title">操作流水</div></div><div class="chip-month num">日常账本</div></div>
+          <div class="rule"></div>
+          <div class="tip" style="margin-top:10px">谁在什么时候改了哪笔，改前改后都留着。只追加，界面不提供编辑和删除；账目删了流水还在。</div>
+          <div class="chips" style="margin-top:10px"><span class="c on mini">全部</span><span class="c mini">按人</span><span class="c mini">按动作</span><span class="c mini">按时间</span><span class="c mini">导出</span></div>
+          <div class="grp">2026-11-04</div>
+          <div class="log"><div class="log-t num">14:22 · 给爱人的副本</div><div class="log-b"><b>修改</b>　伙食 / 周末买菜</div><div class="log-d">金额 38.50 → 42.00　微信</div></div>
+          <div class="log"><div class="log-t num">12:07 · 本机使用者</div><div class="log-b"><b>记一笔</b>　伙食 / 周末买菜</div><div class="log-d">新增 38.50　微信</div></div>
+          <div class="log"><div class="log-t num">09:30 · 本机使用者</div><div class="log-b"><b>周期补记</b>　居家 / 房租</div><div class="log-d">新增 2,000.00　银行卡</div></div>
+          <div class="log"><div class="log-t num">09:30 · 本机使用者</div><div class="log-b"><b>分享账本</b>　日常账本</div><div class="log-d">允许对方更改 · 署名「给爱人的副本」</div></div>
+          <div class="grp">2026-11-03</div>
+          <div class="log"><div class="log-t num">20:11 · 本机使用者</div><div class="log-b"><b>删除后撤销</b>　出行 / 打车</div><div class="log-d">删除 26.00 → 已恢复</div></div>
+          <div class="band" style="margin-top:10px"><span>共 128 条 · 点一条跳到对应账目</span><span class="arrow">&gt;</span></div>
+        </div>
+        <div class="tabbar"><span>账本</span><span>流水</span><span>月结</span><span class="on">我的</span></div>
+      </div>
+      <div class="cap"><b>肆 · 操作流水页</b><span>全账本一条完整留痕：署名、时间、动作、哪笔账、改前改后；可筛选、可导出、点条目跳转。</span></div>
+    </div>
+
+    <div class="card">
+      <div class="phone" data-name="伍 · 设置页（我的）">
+        <div class="status num"><span>9:41</span><span>· · ·</span></div>
+        <div class="navbar">我的</div>
+        <div class="screen">
+          <div class="head"><div><div class="head-sub">SETTINGS</div><div class="head-title">我 的</div></div><div class="chip-month num">日常账本</div></div>
+          <div class="rule"></div>
+          <div class="grp">账本与口径</div>
+          <div class="rowline"><span>分类管理<small>　自定义名称、图标、颜色</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>账户管理<small>　现金 / 微信 / 银行卡</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>账本管理<small>　日常 / 旅行 / 装修</small></span><span class="arrow">&gt;</span></div>
+          <div class="grp">记快一点</div>
+          <div class="rowline"><span>常用模板<small>　买菜 / 通勤 / 工资</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>周期账<small>　房租 / 工资自动补记</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>预算设置<small>　总预算与分类预算</small></span><span class="arrow">&gt;</span></div>
+          <div class="grp">数据与分享</div>
+          <div class="rowline"><span>分享账本<small>　勾可改或只读</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>操作流水<small>　谁在什么时候改的</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>回传合并<small>　收对方改动与流水</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>导出与备份<small>　换手机不丢账</small></span><span class="arrow">&gt;</span></div>
+          <div class="rowline"><span>本地占用<small>　清理票据图片</small></span><span class="arrow">&gt;</span></div>
+          <div class="tip">数据仍以本机为主，上云方案待定；此处仅为界面长相。</div>
+        </div>
+        <div class="tabbar"><span>账本</span><span>流水</span><span>月结</span><span class="on">我的</span></div>
+      </div>
+      <div class="cap"><b>伍 · 设置页</b><span>分类、账户、账本、模板、周期账、预算、导出备份、分享、操作流水、回传合并的入口。</span></div>
+    </div>
+
+    <div class="card">
+      <div class="phone" data-name="陆 · 分享账本弹层（勾可否更改）">
+        <div class="status num"><span>9:41</span><span>· · ·</span></div>
+        <div class="navbar">我的</div>
+        <div class="rel">
+          <div class="screen" style="opacity:.35">
+            <div class="head"><div><div class="head-sub">SETTINGS</div><div class="head-title">我 的</div></div></div>
+            <div class="rule"></div>
+            <div class="rowline"><span>分类管理</span><span class="arrow">&gt;</span></div>
+            <div class="rowline"><span>账本管理</span><span class="arrow">&gt;</span></div>
+            <div class="rowline"><span>分享账本</span><span class="arrow">&gt;</span></div>
+          </div>
+          <div class="mask">
+            <div class="sheet">
+              <h3>分享账本</h3>
+              <p>一次发出去一本账，改不改由你当场定</p>
+              <div class="sline"><span>选账本</span><span class="num">日常账本　&gt;</span></div>
+              <div class="sline"><span>时间范围</span><span>全部　&gt;</span></div>
+              <div class="sline"><span>允许对方更改</span><span class="switch on"><i></i></span></div>
+              <div class="sline"><span>给这份副本署名</span><span>给爱人的副本　&gt;</span></div>
+              <div class="tip">不勾：对方只读，记改删入口全隐藏。<br>勾了：对方能改，每次改动自动记下署名、时间、改前改后，汇进操作流水。</div>
+              <div class="btn" style="margin-top:12px">生成并转发到微信</div>
+              <div class="btn ghost" style="margin-top:7px;letter-spacing:.12em">取 消</div>
+            </div>
+          </div>
+        </div>
+        <div class="tabbar"><span>账本</span><span>流水</span><span>月结</span><span class="on">我的</span></div>
+      </div>
+      <div class="cap"><b>陆 · 分享账本弹层</b><span>选账本、勾「允许对方更改」、填留痕署名、选范围，生成文件转发微信。</span></div>
+    </div>
+
+  </div>
+
+  <div class="footnote">静态长相稿，仅用于看界面；示例数据，不含任何真实账目。配色与排版沿用现有小程序规范，业务代码未改动。</div>
+</div>
+
+<div id="overlay"><div class="ov-name" id="ovName"></div><div id="ovBox"></div></div>
+<script>
+var overlay=document.getElementById('overlay'),ovName=document.getElementById('ovName'),ovBox=document.getElementById('ovBox');
+document.querySelectorAll('.phone').forEach(function(p){
+  p.addEventListener('click',function(){
+    ovName.textContent=p.getAttribute('data-name');
+    ovBox.innerHTML='';
+    var c=p.cloneNode(true);c.style.cursor='default';ovBox.appendChild(c);
+    overlay.classList.add('on');
+  });
+});
+overlay.addEventListener('click',function(e){if(e.target===overlay||e.target===ovBox)overlay.classList.remove('on')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')overlay.classList.remove('on')});
+</script>
+</body>
+</html>
