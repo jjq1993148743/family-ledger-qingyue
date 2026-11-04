@@ -1,0 +1,101 @@
+.head {
+  padding-bottom: 28rpx;
+}
+
+.head-sub {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20rpx;
+  letter-spacing: 4rpx;
+  color: #8A9A9B;
+}
+
+.head-title {
+  margin-top: 10rpx;
+  font-size: 58rpx;
+  font-weight: 600;
+  letter-spacing: 10rpx;
+}
+
+.month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-top: 1rpx solid #C9D3D0;
+  border-bottom: 1rpx solid #C9D3D0;
+}
+
+.nav-btn {
+  padding: 8rpx 18rpx;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+  color: #4A5B60;
+  border: 1rpx solid #C9D3D0;
+}
+
+.nav-current {
+  font-size: 32rpx;
+  letter-spacing: 4rpx;
+}
+
+.total-card {
+  margin-top: 36rpx;
+  padding: 40rpx 34rpx;
+  background: #22323B;
+  color: #F4F6F5;
+}
+
+.total-caption {
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+  color: #A9BDB9;
+}
+
+.total-big {
+  margin-top: 12rpx;
+  font-size: 76rpx;
+  line-height: 1.25;
+}
+
+.total-split {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28rpx;
+  padding-top: 22rpx;
+  border-top: 1rpx solid #40565E;
+  font-size: 24rpx;
+  color: #A9BDB9;
+}
+
+.bar-item {
+  margin-bottom: 28rpx;
+}
+
+.bar-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+
+.bar-track {
+  margin-top: 12rpx;
+  height: 14rpx;
+  background: #E3E9E6;
+}
+
+.bar-fill {
+  height: 14rpx;
+  background: #B4653A;
+}
+
+.bar-fill-alt {
+  background: #4E7C74;
+}
+
+.foot-note {
+  margin-top: 72rpx;
+  text-align: center;
+  font-size: 22rpx;
+  letter-spacing: 2rpx;
+  color: #8A9A9B;
+}

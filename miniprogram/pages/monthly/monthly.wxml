@@ -1,0 +1,47 @@
+<view class="paper">
+  <view class="head">
+    <view class="head-sub">MONTHLY · QING YUE</view>
+    <view class="head-title">月结</view>
+  </view>
+
+  <view class="month-nav">
+    <view class="nav-btn" bindtap="prevMonth">上一月</view>
+    <view class="nav-current num">{{month}}</view>
+    <view class="nav-btn" bindtap="nextMonth">下一月</view>
+  </view>
+
+  <view class="total-card">
+    <view class="total-caption">本月结余</view>
+    <view class="total-big num">{{summary.balance}}</view>
+    <view class="total-split">
+      <text>收入 <text class="num income">+{{summary.income}}</text></text>
+      <text>支出 <text class="num outgo">-{{summary.expense}}</text></text>
+    </view>
+  </view>
+
+  <view class="section-label">壹 · 支出都去哪了</view>
+  <view wx:if="{{cats.length === 0}}" class="empty">这个月还没有支出记录</view>
+  <view wx:for="{{cats}}" wx:key="label" class="bar-item">
+    <view class="bar-top">
+      <text>{{item.label}}</text>
+      <text class="num">{{item.value}}</text>
+    </view>
+    <view class="bar-track">
+      <view class="bar-fill" style="width: {{item.width}}%"></view>
+    </view>
+  </view>
+
+  <view class="section-label">贰 · 谁花的</view>
+  <view wx:if="{{members.length === 0}}" class="empty">暂无数据</view>
+  <view wx:for="{{members}}" wx:key="label" class="bar-item">
+    <view class="bar-top">
+      <text>{{item.label}}</text>
+      <text class="num">{{item.value}}</text>
+    </view>
+    <view class="bar-track">
+      <view class="bar-fill bar-fill-alt" style="width: {{item.width}}%"></view>
+    </view>
+  </view>
+
+  <view class="foot-note">本月共 {{count}} 笔 · 数据只存在本机</view>
+</view>

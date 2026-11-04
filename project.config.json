@@ -1,0 +1,20 @@
+{
+  "description": "家庭收支本-青月版",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "projectname": "家庭收支本-青月版",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "useIsolateContext": true,
+    "checkSiteMap": false
+  },
+  "condition": {}
+}

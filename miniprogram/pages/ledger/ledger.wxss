@@ -1,0 +1,215 @@
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 28rpx;
+}
+
+.head-sub {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20rpx;
+  letter-spacing: 4rpx;
+  color: #8A9A9B;
+}
+
+.head-title {
+  margin-top: 10rpx;
+  font-size: 58rpx;
+  font-weight: 600;
+  letter-spacing: 10rpx;
+}
+
+.month-chip {
+  margin-top: 12rpx;
+  padding: 8rpx 18rpx;
+  border: 1rpx solid #C9D3D0;
+  font-size: 24rpx;
+  color: #4A5B60;
+}
+
+.summary-row {
+  display: flex;
+  margin-top: 36rpx;
+  align-items: stretch;
+}
+
+.summary-main {
+  width: 62%;
+  padding: 36rpx 30rpx 30rpx;
+  background: #22323B;
+  color: #F4F6F5;
+  box-sizing: border-box;
+}
+
+.summary-caption {
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+  color: #A9BDB9;
+}
+
+.summary-big {
+  margin-top: 16rpx;
+  font-size: 64rpx;
+  line-height: 1.2;
+}
+
+.summary-foot {
+  margin-top: 24rpx;
+  font-size: 22rpx;
+  color: #A9BDB9;
+}
+
+.summary-side {
+  flex: 1;
+  margin-left: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-cell {
+  flex: 1;
+  padding: 18rpx 20rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #E3E9E6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-cell:first-child {
+  margin-bottom: 16rpx;
+}
+
+.side-caption {
+  font-size: 22rpx;
+  color: #8A9A9B;
+  letter-spacing: 2rpx;
+}
+
+.side-value {
+  margin-top: 8rpx;
+  font-size: 30rpx;
+}
+
+.type-row {
+  display: flex;
+}
+
+.type-btn {
+  width: 160rpx;
+  padding: 14rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  letter-spacing: 6rpx;
+  border: 1rpx solid #C9D3D0;
+  color: #4A5B60;
+  margin-right: 20rpx;
+}
+
+.type-on {
+  color: #F4F6F5;
+  border-color: #22323B;
+}
+
+.expense-on {
+  background: #B4653A;
+  border-color: #B4653A;
+}
+
+.income-on {
+  background: #4E7C74;
+  border-color: #4E7C74;
+}
+
+.amount-row {
+  display: flex;
+  align-items: center;
+  margin-top: 32rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid #22323B;
+}
+
+.amount-mark {
+  font-size: 40rpx;
+  color: #8A9A9B;
+}
+
+.amount-input {
+  flex: 1;
+  margin-left: 16rpx;
+  font-size: 60rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.field-label {
+  margin: 32rpx 0 16rpx;
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+  color: #8A9A9B;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note-input {
+  width: 100%;
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-left: 4rpx solid #C9D3D0;
+  font-size: 28rpx;
+  height: 84rpx;
+}
+
+.save-btn {
+  margin-top: 48rpx;
+  width: 68%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #E3E9E6;
+}
+
+.entry-cat {
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+}
+
+.entry-member {
+  font-size: 24rpx;
+  color: #8A9A9B;
+}
+
+.entry-note {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #8A9A9B;
+}
+
+.entry-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.entry-amount {
+  font-size: 34rpx;
+}
+
+.entry-del {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #A9B6B4;
+  letter-spacing: 2rpx;
+}

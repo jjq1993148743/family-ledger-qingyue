@@ -1,0 +1,72 @@
+page {
+  background: #F4F6F5;
+  color: #22323B;
+  font-family: "Songti SC", "Noto Serif SC", "STSong", "SimSun", serif;
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+
+.paper {
+  min-height: 100vh;
+  padding: 44rpx 36rpx 100rpx;
+  box-sizing: border-box;
+}
+
+.rule-line {
+  height: 1rpx;
+  background: #C9D3D0;
+}
+
+.num {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 1rpx;
+}
+
+.income {
+  color: #4E7C74;
+}
+
+.outgo {
+  color: #B4653A;
+}
+
+.chip {
+  display: inline-block;
+  padding: 10rpx 26rpx;
+  margin: 0 16rpx 16rpx 0;
+  border: 1rpx solid #C9D3D0;
+  color: #4A5B60;
+  font-size: 26rpx;
+  letter-spacing: 2rpx;
+}
+
+.chip-on {
+  border-color: #22323B;
+  background: #22323B;
+  color: #F4F6F5;
+}
+
+.btn-primary {
+  background: #22323B;
+  color: #F4F6F5;
+  border-radius: 2rpx;
+  letter-spacing: 8rpx;
+}
+
+.btn-primary::after {
+  border: none;
+}
+
+.section-label {
+  margin: 48rpx 0 24rpx;
+  font-size: 26rpx;
+  letter-spacing: 6rpx;
+  color: #4E7C74;
+}
+
+.empty {
+  padding: 64rpx 0;
+  text-align: center;
+  font-size: 26rpx;
+  color: #8A9A9B;
+}

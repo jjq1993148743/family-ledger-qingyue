@@ -1,0 +1,69 @@
+<view class="paper">
+  <view class="head">
+    <view class="head-left">
+      <view class="head-sub">QING YUE · FAMILY LEDGER</view>
+      <view class="head-title">家庭收支本</view>
+    </view>
+    <view class="month-chip num">{{month}}</view>
+  </view>
+
+  <view class="rule-line"></view>
+
+  <view class="summary-row">
+    <view class="summary-main">
+      <view class="summary-caption">本月支出</view>
+      <view class="summary-big num">{{summary.expense}}</view>
+      <view class="summary-foot">共 {{total}} 笔记账</view>
+    </view>
+    <view class="summary-side">
+      <view class="side-cell">
+        <text class="side-caption">收入</text>
+        <text class="side-value num income">+{{summary.income}}</text>
+      </view>
+      <view class="side-cell">
+        <text class="side-caption">结余</text>
+        <text class="side-value num">{{summary.balance}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section-label">壹 · 记一笔</view>
+
+  <view class="type-row">
+    <view class="type-btn {{type === 'expense' ? 'type-on expense-on' : ''}}" data-type="expense" bindtap="switchType">支出</view>
+    <view class="type-btn {{type === 'income' ? 'type-on income-on' : ''}}" data-type="income" bindtap="switchType">收入</view>
+  </view>
+
+  <view class="amount-row">
+    <text class="amount-mark num">¥</text>
+    <input class="amount-input num" type="digit" placeholder="0.00" value="{{amount}}" bindinput="onAmountInput" />
+  </view>
+
+  <view class="field-label">分类</view>
+  <view class="chip-row">
+    <view wx:for="{{categories}}" wx:key="key" class="chip {{category === item.key ? 'chip-on' : ''}}" data-key="{{item.key}}" bindtap="chooseCategory">{{item.label}}</view>
+  </view>
+
+  <view class="field-label">谁记的</view>
+  <view class="chip-row">
+    <view wx:for="{{members}}" wx:key="*this" class="chip {{member === item ? 'chip-on' : ''}}" data-name="{{item}}" bindtap="chooseMember">{{item}}</view>
+  </view>
+
+  <view class="field-label">备注</view>
+  <input class="note-input" placeholder="选填，比如「周末买菜」" value="{{note}}" maxlength="40" bindinput="onNoteInput" />
+
+  <button class="btn-primary save-btn" bindtap="submit">记 下</button>
+
+  <view class="section-label">贰 · 近几笔</view>
+  <view wx:if="{{total === 0}}" class="empty">还没记过，上面写第一笔吧</view>
+  <view wx:for="{{recent}}" wx:key="id" class="entry">
+    <view class="entry-left">
+      <view class="entry-cat">{{item.catLabel}}<text class="entry-member"> · {{item.member}}</text></view>
+      <view class="entry-note">{{item.note || item.date}}</view>
+    </view>
+    <view class="entry-right">
+      <view class="entry-amount num {{item.type === 'income' ? 'income' : 'outgo'}}">{{item.sign}}{{item.amountText}}</view>
+      <view class="entry-del" data-id="{{item.id}}" bindtap="onDelete">删除</view>
+    </view>
+  </view>
+</view>
