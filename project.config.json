@@ -4,9 +4,9 @@
   "compileType": "miniprogram",
   "libVersion": "latest",
   "projectname": "家庭收支本-青月版",
-  "appid": "touristappid",
+  "appid": "wxeca88f1983d872fd",
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": true,
     "postcss": true,
