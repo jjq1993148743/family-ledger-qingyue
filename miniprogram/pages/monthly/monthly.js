@@ -28,7 +28,11 @@ Page({
   },
 
   onShow: function () {
+    const self = this
     if (this.data.month) this.build()
+    store.syncFromCloud().then(function () {
+      if (self.data.month) self.build()
+    })
   },
 
   build: function () {

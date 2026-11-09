@@ -47,7 +47,11 @@ Page({
   },
 
   onShow: function () {
+    const self = this
     this.reload()
+    store.syncFromCloud().then(function () {
+      self.reload()
+    })
   },
 
   reload: function () {
